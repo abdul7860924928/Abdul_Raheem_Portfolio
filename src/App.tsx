@@ -23,7 +23,9 @@ import {
   Globe,
   ShoppingBag,
   Truck,
-  CheckCircle2
+  CheckCircle2,
+  Phone,
+  MessageCircle
 } from 'lucide-react';
 
 const reveal = {
@@ -444,6 +446,10 @@ function App() {
                 </span>
               </div>
             </div>
+            <div className="float-chip chip-adoption" title="Real User Problem Solver & Product Adoption Solutions">
+              <Users size={16} />
+              <span>Problem Solver · Adoption</span>
+            </div>
             <div className="float-chip chip-mobile">
               <Smartphone size={17} />
               <span>Mobile apps</span>
@@ -501,25 +507,40 @@ function App() {
           >
             <span className="section-index">01 / ABOUT</span>
             <h2>
-              Engineering that connects
+              Engineering that bridges
               <br />
-              <span className="gradient-text">people, systems &amp; outcomes.</span>
+              <span className="gradient-text">technology, leadership &amp; product impact.</span>
             </h2>
           </motion.div>
           <div className="about-grid">
-            <motion.p variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true }} className="about-lead">
-              I work across the full product lifecycle — from understanding real user problems and shaping architecture to
-              shipping mobile apps, integrating backend services, and scaling products after launch.
-            </motion.p>
+            <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true }} className="about-lead-col">
+              <p className="about-lead">
+                I am a <strong>Senior Flutter Developer</strong>, <strong>Full-Stack Engineer</strong>, and <strong>Technical Team Lead</strong> with over 4+ years of hands-on experience.
+              </p>
+              <p className="about-lead-sub">
+                While my technical roots are deep in building scalable distributed systems — using <strong>Flutter (Android &amp; iOS)</strong>, <strong>Java Spring Boot</strong>, and <strong>Kafka</strong> — I really view my core role as bridging the gap between rigorous engineering, empathetic leadership, and strategic product ownership.
+              </p>
+            </motion.div>
             <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={{ once: true }} className="about-details">
               <p>
-                Over the past 4+ years, I have architected and built impactful software across <strong>Fintech</strong>,{' '}
-                <strong>enterprise B2B SaaS</strong>, and <strong>consumer applications</strong> — including loan recovery platforms,
-                offline retail Buy-Now-Pay-Later (BNPL) credit solutions, automated HRMS &amp; payroll systems, and production commerce apps.
+                Throughout my career, I’ve focused on the <strong>entire product lifecycle</strong>. Instead of just writing code to a specification, I work across every stage — from understanding user behavior and architectural brainstorming, to shipping production mobile apps, driving post-deployment user adoption, and measuring actual business impact.
               </p>
+              <div className="about-highlights-card">
+                <span className="highlights-label">PROVEN CAREER HIGHLIGHTS</span>
+                <ul className="about-highlights-list">
+                  <li>
+                    <strong>Field Recovery Ownership (2+ Years):</strong> Single-handedly owned and scaled our flagship Field Recovery mobile platform, solving complex problems around <em>dynamic route optimization, clustering algorithms, and offline-first sync</em> that directly increased field agent productivity.
+                  </li>
+                  <li>
+                    <strong>AI Loan Recovery at Scale (Credhas / CredResolve):</strong> Leading the engineering for AI-driven loan recovery systems managing over <strong>10 Lakh+ active leads</strong> while maintaining strict <strong>VAPT security compliance</strong> and high system resilience.
+                  </li>
+                  <li>
+                    <strong>150+ Applications Published:</strong> Successfully architected, built, and shipped more than <strong>150 production applications</strong> across Google Play Store and Apple App Store spanning Fintech, B2B SaaS, and global commerce.
+                  </li>
+                </ul>
+              </div>
               <p>
-                At <strong>CredResolve</strong>, I led mobile delivery and contributed to platform architecture for high-volume loan recovery operations.
-                Earlier at <strong>Webkul</strong>, I engineered and published Flutter commerce applications. I am actively open to engineering opportunities in <strong>India and Worldwide (Relocation &amp; Remote)</strong>.
+                Ultimately, I thrive in roles where I can lead high-performance teams to build production-ready solutions that actually move the needle for the business. Open to engineering leadership and senior roles across <strong>India and Worldwide (Relocation &amp; Remote)</strong>.
               </p>
               <div className="about-links">
                 <a href="https://github.com/abdul7860924928" target="_blank" rel="noreferrer">
@@ -1040,12 +1061,39 @@ function App() {
             <p>
               I’m open to opportunities across <strong>India and Worldwide (Relocation &amp; Remote)</strong>. Let’s talk about building high-impact mobile and backend systems together.
             </p>
+            <div className="contact-direct-grid">
+              <a href="mailto:ar7860924928@gmail.com" className="contact-card-direct">
+                <div className="contact-card-icon">
+                  <Mail size={20} />
+                </div>
+                <div className="contact-card-body">
+                  <span className="contact-card-tag">DIRECT EMAIL</span>
+                  <strong className="contact-card-value">ar7860924928@gmail.com</strong>
+                </div>
+                <ArrowUpRight size={16} className="contact-card-arrow" />
+              </a>
+
+              <a href="https://wa.me/919648601914" target="_blank" rel="noreferrer" className="contact-card-direct">
+                <div className="contact-card-icon contact-card-icon-wa">
+                  <MessageCircle size={20} />
+                </div>
+                <div className="contact-card-body">
+                  <span className="contact-card-tag">PHONE &amp; WHATSAPP</span>
+                  <strong className="contact-card-value">+91 9648601914</strong>
+                </div>
+                <ArrowUpRight size={16} className="contact-card-arrow" />
+              </a>
+            </div>
+
             <div className="contact-actions">
               <a className="button button-primary" href="https://www.linkedin.com/in/abdul-raheem-b44457235/" target="_blank" rel="noreferrer">
                 <Linkedin size={17} /> Connect on LinkedIn <ArrowUpRight size={16} />
               </a>
               <a className="button button-ghost" href="https://github.com/abdul7860924928" target="_blank" rel="noreferrer">
                 <Github size={17} /> Explore GitHub
+              </a>
+              <a className="button button-ghost" href="tel:+919648601914">
+                <Phone size={17} /> Call Direct
               </a>
               <a className="button button-ghost" href="https://mobikul.com/author/abdulraheem-mk357/" target="_blank" rel="noreferrer">
                 <Mail size={17} /> Published writing

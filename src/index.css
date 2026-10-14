@@ -463,6 +463,12 @@ h1 {
   color: var(--neon);
 }
 
+.chip-adoption {
+  top: 9%;
+  left: -4%;
+  animation-delay: -3s;
+}
+
 .chip-mobile {
   top: 17%;
   right: -1%;
@@ -572,6 +578,12 @@ h1 {
   gap: 90px;
 }
 
+.about-lead-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 .about-lead {
   font-size: 23px;
   line-height: 1.65;
@@ -580,11 +592,73 @@ h1 {
   margin: 0;
 }
 
+.about-lead-sub {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #9ba5b7;
+  margin: 0;
+}
+
+.about-lead-sub strong {
+  color: #f1f4f9;
+}
+
 .about-details p {
   color: #9ba5b7;
   font-size: 13.5px;
   line-height: 1.95;
   margin: 0 0 16px;
+}
+
+.about-highlights-card {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.highlights-label {
+  display: block;
+  font: 9.5px 'DM Mono', monospace;
+  letter-spacing: 0.12em;
+  color: var(--neon);
+  margin-bottom: 14px;
+}
+
+.about-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-highlights-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #9ba5b7;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.about-highlights-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--neon);
+  font-size: 14px;
+}
+
+.about-highlights-list strong {
+  color: #f1f4f9;
+}
+
+.about-highlights-list em {
+  font-style: normal;
+  color: #cad3e0;
 }
 
 .about-links {
@@ -1426,6 +1500,81 @@ h1 {
   margin-top: 20px;
 }
 
+.contact-direct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+  position: relative;
+  max-width: 650px;
+}
+
+.contact-card-direct {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(17, 22, 33, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(12px);
+  text-decoration: none;
+}
+
+.contact-card-direct:hover {
+  border-color: var(--neon);
+  transform: translateY(-3px);
+  background: rgba(23, 30, 45, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 240, 255, 0.12);
+}
+
+.contact-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(0, 240, 255, 0.08);
+  color: var(--neon);
+  flex-shrink: 0;
+}
+
+.contact-card-icon-wa {
+  background: rgba(37, 211, 102, 0.12);
+  color: #25d366;
+}
+
+.contact-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-grow: 1;
+}
+
+.contact-card-tag {
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  color: #7f8999;
+}
+
+.contact-card-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f1f4f9;
+}
+
+.contact-card-arrow {
+  color: #636d7d;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact-card-direct:hover .contact-card-arrow {
+  color: var(--neon);
+  transform: translate(2px, -2px);
+}
+
 .contact-actions {
   position: relative;
   margin-top: 27px;
@@ -1605,6 +1754,10 @@ h1 {
   }
   .profile-card {
     width: 220px;
+  }
+  .chip-adoption {
+    left: -2px;
+    top: 5%;
   }
   .chip-mobile {
     right: -3px;
