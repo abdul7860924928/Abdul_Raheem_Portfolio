@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import profilePhoto from './assets/abdul-raheem.jpg';
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -429,7 +430,7 @@ function App() {
             <div className="orbit orbit-c" />
             <div className="profile-card">
               <div className="photo-frame">
-                <img src="/abdul-raheem.jpg" alt="Abdul Raheem" />
+                <img src={profilePhoto} alt="Abdul Raheem" />
                 <div className="photo-overlay" />
                 <span className="photo-label">FLUTTER · FULL-STACK</span>
               </div>
